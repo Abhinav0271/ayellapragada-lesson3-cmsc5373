@@ -1,13 +1,42 @@
-<h1>Computer Square</h1>
-<form >
-<div class="form-group"> 
-    <label for="number"> Enter a Number</label>
-    <input type="number" name="number" id="number" required min="1" max="100"
-    class="form-control" placeholder="Enter a number 1~100">
+<h1>Tic-Tac-Toe Game</h1>
+<div id="message" class="fs-3 text-primary bg-success bg-opacity-25">Message Area</div>
+Turn: <img id="turn" src="/images/X.png" height="40" width="40">
 
-
-</div>
-
-<button type = "submit" class="btn btn-outline-primary" >Submit</button>
-</form>
-<ul id="display" class = "bg-success bg-opacity-25"></ul>
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <button value="btn0"><img src="/images/O.png" width="100" height="100"></button>
+            </td>
+            <td>
+                <button value="btn1"><img src="/images/X.png" width="100" height="100"></button>
+            </td>
+            <td>
+                <button value="btn2"><img src="/images/U.png" width="100" height="100"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button value="btn3"><img src="/images/U.png" width="100" height="100"></button>
+            </td>
+            <td>
+                <button value="btn4"><img src="/images/U.png" width="100" height="100"></button>
+            </td>
+            <td>
+                <button value="btn5"><img src="/images/U.png" width="100" height="100"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button value="btn6"><img src="/images/U.png" width="100" height="100"></button>
+            </td>
+            <td>
+                <button value="btn7"><img src="/images/U.png" width="100" height="100"></button>
+            </td>
+            <td>
+                <button value="btn8"><img src="/images/U.png" width="100" height="100"></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button id="button-new-game" class="btn btn-outline-primary">New Game</button>

@@ -1,27 +1,25 @@
-import { homepage } from "../view/homepage.js"
-import { menu2page } from "../view/menu2page.js"
+import { homePageView } from "../view/home_page.js"
+import { PlayRecordPageView } from "../view/playrecord_page.js";
 
-export const routePathNames = {
-    HOME : '/',
-    MENU2: '/menu2',
-
+export const routePathnames = {
+    HOME: '/',
+    PLAYRECORD: '/playrecord',
 }
 
 export const routes = [
-    { path:routePathNames.HOME, page: homepage},
-    {path:routePathNames.MENU2, page: menu2page}
-
+    {path: routePathnames.HOME,  page: homePageView},
+    {path: routePathnames.PLAYRECORD, page: PlayRecordPageView}
 ];
 
-export function routing(pathname, hash){
-    const route = routes.find(r=> r.path ==pathname);
-    if(route){
-        if(hash && hash.length > 1){
+export function routing(pathname, hash) {
+    const route = routes.find(r => r.path == pathname);
+    if(route) {
+        if (hash && hash.length > 1) {
             route.page(hash.substring(1));
-        }else{
-        route.page();}
-    }
-    else{
+        } else {
+            route.page();
+        }
+    } else {
         routes[0].page();
     }
 }
